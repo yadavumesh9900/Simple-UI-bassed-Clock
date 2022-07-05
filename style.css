@@ -1,0 +1,200 @@
+body{
+    background-color: white;
+}
+.clock{
+    height: 250px;
+    width: 250px;
+    border:4px solid black;
+    border-radius: 50%;
+    display:inline-block;
+    background-color:lightslategrey;
+    
+    box-shadow: 0 1.5px 2px 0 rgb(114, 113, 113);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.center{
+    background-color:rgb(8, 42, 71);
+    width:5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* this is also trick for item place in center*/
+    /*display: grid;
+    place-items: center;*/
+}
+.sec{
+    height: 95px;
+    width: 1px;
+    background-color: brown;
+
+    position: absolute;
+    top:12.2%;
+    left: 49.5%;
+    transform: translate(-50%,-50%);
+    transform-origin:bottom ;
+
+    z-index: 3;
+    
+    animation-name:second;
+    animation-duration: 60s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;   
+     /* ease-in used for starting slow,
+    ease-out is used for starting fast and 
+     ease-in-out is used for starting slow then in last fast.
+     but linear is used constant speed*/
+     
+    
+    
+}
+@keyframes second{
+    from{
+         transform: rotateZ(0deg);
+        }
+    to{
+       transform: rotateZ(360deg);
+    }
+}
+
+
+.min{
+    height: 80px;
+    width: 3px;
+    background-color: black;
+    position: absolute;
+    top:18%;
+    left: 49.5%;
+    transform: translate(-50%,-50%);
+    
+
+    z-index: 2;
+
+    animation-name:minute;
+    animation-duration: 3600s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform-origin: bottom;
+}
+@keyframes minute{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.hour{
+    height: 70px;
+    width: 4px;
+    background-color: black;
+    position: absolute;
+    top:22.25%;
+    left: 49.34%;
+    transform: translate(-50%,-50%);
+    
+    
+    z-index: 1;
+
+    animation-name:hours;
+    animation-duration:21600s;
+    animation-iteration-count:infinite;
+    animation-timing-function: linear;
+    transform-origin: bottom;
+}
+
+@keyframes hours{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+.one{
+    position: absolute;
+    top:25px;
+    left:190px;
+}
+.eleven{
+    position: absolute;
+    top:25px;
+    left:50px;
+}
+
+
+.tweleve{
+    position: absolute;
+    top:5px;
+    left:120px;
+}
+.six{
+    position: absolute;
+    top:230px;
+    left:120px;
+
+}
+.two{
+    position: absolute;
+    top:70px;
+    left:215px;
+
+}
+.three{
+    position: absolute;
+    top:115px;
+    left:230px;
+
+}
+
+.four{
+    position: absolute;
+    top:160px;
+    left:215px;
+
+}
+
+.five{
+    position: absolute;
+    top:205px;
+    left:190px;
+
+}
+
+.seven{
+    position: absolute;
+    top:205px;
+    left:50px;
+
+}
+.eight{
+    position: absolute;
+    top:160px;
+    left:15px;
+
+}
+
+.nine{
+    position: absolute;
+    top:115px;
+    left:5px;
+
+}
+
+.ten{
+    position: absolute;
+    top:70px;
+    left:23px;
+
+
+}
+
